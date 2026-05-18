@@ -22,7 +22,7 @@
 
   --transition: 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
 
-  
+  /* Seções: padding vertical responsivo */
   --section-py: 8rem;
 }
 
@@ -49,7 +49,7 @@ ul { list-style: none; }
   padding: 0 2rem;
 }
 
-
+/* ---- TYPOGRAPHY ---- */
 .label {
   font-family: var(--font-body);
   font-size: 0.72rem;
@@ -80,6 +80,7 @@ ul { list-style: none; }
   font-size: 1rem;
   line-height: 1.8;
   color: var(--text-muted);
+  /* Garante que não estoure em containers estreitos */
   max-width: min(48ch, 100%);
   margin-bottom: 1.2rem;
 }
@@ -98,6 +99,7 @@ ul { list-style: none; }
   justify-content: center;
   gap: 0.5rem;
   padding: 0.8rem 2rem;
+  /* Área de toque mínima (WCAG 2.5.5) */
   min-height: 44px;
   border-radius: 100px;
   font-family: var(--font-body);
@@ -135,7 +137,9 @@ ul { list-style: none; }
 }
 .btn--large { padding: 1rem 2.6rem; font-size: 1rem; }
 
-/* NAV */
+/* ==========================================
+   NAV
+   ========================================== */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -176,6 +180,7 @@ ul { list-style: none; }
   color: var(--white);
   background: var(--terracota);
   padding: 0.55rem 1.4rem;
+  /* Área de toque mínima */
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -191,6 +196,7 @@ ul { list-style: none; }
   background: none;
   border: none;
   cursor: pointer;
+  /* Área de toque mínima */
   min-width: 44px;
   min-height: 44px;
   padding: 10px;
@@ -226,6 +232,7 @@ ul { list-style: none; }
 .mobile-menu li { margin: 1.2rem 0; }
 .mobile-link {
   font-family: var(--font-display);
+  /* Escala fluida para não vazar em 360px */
   font-size: clamp(1.6rem, 6vw, 2.2rem);
   font-weight: 300;
   color: var(--brown);
@@ -246,7 +253,9 @@ ul { list-style: none; }
   border-radius: 100px;
 }
 
-/* HERO */
+/* ==========================================
+   HERO
+   ========================================== */
 .hero {
   min-height: 100svh;
   display: flex;
@@ -296,6 +305,7 @@ ul { list-style: none; }
 }
 .hero-title {
   font-family: var(--font-display);
+  /* Fluido do mobile ao desktop sem media queries extras */
   font-size: clamp(2.8rem, 10vw, 8rem);
   font-weight: 300;
   line-height: 0.95;
@@ -341,7 +351,9 @@ ul { list-style: none; }
   50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
 }
 
-/* MARQUEE */
+/* ==========================================
+   MARQUEE
+   ========================================== */
 .marquee-wrap {
   background: var(--brown);
   overflow: hidden;
@@ -368,7 +380,9 @@ ul { list-style: none; }
   to   { transform: translateX(-50%); }
 }
 
-/* SOBRE */
+/* ==========================================
+   SOBRE
+   ========================================== */
 .sobre {
   padding: var(--section-py) 0;
   background: var(--white);
@@ -463,7 +477,9 @@ ul { list-style: none; }
   color: var(--text-muted);
 }
 
-/* PRODUTOS */
+/* ==========================================
+   PRODUTOS
+   ========================================== */
 .produtos {
   padding: var(--section-py) 0;
   background: var(--cream);
@@ -579,7 +595,9 @@ ul { list-style: none; }
 }
 .produto-link:hover { color: var(--white); letter-spacing: 0.1em; }
  
-/* COLEÇÕES */
+/* ==========================================
+   COLEÇÕES
+   ========================================== */
 .colecoes {
   padding: var(--section-py) 0;
   background: var(--white);
@@ -595,6 +613,7 @@ ul { list-style: none; }
   transition: background 0.2s;
 }
 .colecao-item:first-child { border-top: 1px solid var(--cream-dark); }
+/* Hover só em desktop — evita overflow em telas estreitas */
 @media (hover: hover) and (min-width: 901px) {
   .colecao-item:hover { background: var(--cream); margin: 0 -2rem; padding: 2rem; }
 }
@@ -628,7 +647,9 @@ ul { list-style: none; }
 }
 .colecao-item:hover .colecao-arrow { transform: translateX(8px); color: var(--terracota); }
 
-/* PERSONALIZADOS */
+/* ==========================================
+   PERSONALIZADOS
+   ========================================== */
 .personalizados {
   padding: var(--section-py) 0;
   background: var(--brown);
@@ -672,7 +693,9 @@ ul { list-style: none; }
   line-height: 1.4;
 }
 
-/* CONTATO */
+/* ==========================================
+   CONTATO
+   ========================================== */
 .contato {
   padding: var(--section-py) 0;
   background: var(--cream);
@@ -727,7 +750,9 @@ ul { list-style: none; }
   margin-bottom: 2rem;
 }
 
-/* FOOTER */
+/* ==========================================
+   FOOTER
+   ========================================== */
 .footer {
   background: #5a3d2b;
   padding: 4rem 0 1.5rem;
@@ -795,6 +820,7 @@ ul { list-style: none; }
   font-size: 0.92rem;
   color: rgba(245,240,232,0.7);
   transition: 0.3s;
+  /* Área de toque mínima */
   display: inline-block;
   min-height: 36px;
   line-height: 36px;
@@ -815,7 +841,9 @@ ul { list-style: none; }
   color: rgba(245,240,232,0.45);
 }
 
-/* REVEAL ANIMATIONS */
+/* ==========================================
+   REVEAL ANIMATIONS
+   ========================================== */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -829,7 +857,9 @@ ul { list-style: none; }
 .reveal--delay2 { transition-delay: 0.3s; }
 .reveal--delay3 { transition-delay: 0.45s; }
 
-/* RESPONSIVE — TABLET  */
+/* ==========================================
+   RESPONSIVE — TABLET LANDSCAPE (900px)
+   ========================================== */
 @media (max-width: 900px) {
   :root { --section-py: 5rem; }
 
@@ -858,6 +888,7 @@ ul { list-style: none; }
       "banho    corpo"
       "home     presentes";
   }
+  /* Hover com texto oculto visível em touch — exibe sempre */
   .produto-card--banho  .produto-card-content p,
   .produto-card--corpo  .produto-card-content p,
   .produto-card--home   .produto-card-content p,
@@ -867,6 +898,7 @@ ul { list-style: none; }
     margin-bottom: 0.6rem;
   }
 
+  /* Coleções — sem o hover com margin negativa */
   .colecao-item { gap: 1.2rem; padding: 1.4rem 0; }
   .colecao-info h3 { font-size: 1.5rem; }
 
@@ -883,6 +915,7 @@ ul { list-style: none; }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  /* Logo ocupa linha inteira no topo */
   .footer-brand {
     grid-column: 1 / -1;
     padding-bottom: 1rem;
@@ -891,7 +924,9 @@ ul { list-style: none; }
   }
 }
 
-/* RESPONSIVE — TABLET  (768px) */
+/* ==========================================
+   RESPONSIVE — TABLET PORTRAIT (768px)
+   ========================================== */
 @media (max-width: 768px) {
   :root { --section-py: 4.5rem; }
 
@@ -920,7 +955,9 @@ ul { list-style: none; }
   .cta-title { font-size: 2rem; }
 }
 
-/* RESPONSIVE — MOBILE */
+/* ==========================================
+   RESPONSIVE — MOBILE (600px)
+   ========================================== */
 @media (max-width: 600px) {
   :root { --section-py: 4rem; }
 
@@ -969,6 +1006,7 @@ ul { list-style: none; }
     gap: 0.8rem;
   }
   .produto-card { min-height: 200px; }
+  /* Card de velas com proporção 16:9 em mobile */
   .produto-card--velas { aspect-ratio: 16 / 9; min-height: unset; }
 
   /* Coleções */
